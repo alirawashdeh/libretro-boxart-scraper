@@ -3,6 +3,7 @@ roms/*
 
 # Mac
 */.DS_Store
+.DS_Store
 
 # Logs
 logs

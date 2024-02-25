@@ -1,0 +1,29 @@
+{
+  "name": "libretro-boxart-scraper",
+  "version": "1.0.0",
+  "description": "Scrapes boxart from libretro for a folder of roms",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alirawashdeh/libretro-boxart-scraper.git"
+  },
+  "keywords": [
+    "libretro",
+    "scraper",
+    "boxart"
+  ],
+  "author": "Ali Rawashdeh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alirawashdeh/libretro-boxart-scraper/issues"
+  },
+  "homepage": "https://github.com/alirawashdeh/libretro-boxart-scraper#readme",
+  "dependencies": {
+    "fetch": "^1.1.0",
+    "jsdom": "^24.0.0"
+  }
+}

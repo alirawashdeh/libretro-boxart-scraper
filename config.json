@@ -1,4 +1,12 @@
-{
-  "url": "https://thumbnails.libretro.com/Nintendo%20-%20Nintendo%20Entertainment%20System/Named_Boxarts/",
-  "imgheight" : "300"
-}
+[
+  {
+    "folder": "./roms/MD/",
+    "url": "https://thumbnails.libretro.com/Sega%20-%20Mega%20Drive%20-%20Genesis/Named_Boxarts/",
+    "imgheight" : "300"
+  },
+  {
+    "folder": "./roms/FC/",
+    "url": "https://thumbnails.libretro.com/Nintendo%20-%20Nintendo%20Entertainment%20System/Named_Boxarts/",
+    "imgheight" : "300"
+  }
+]

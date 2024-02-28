@@ -6,11 +6,11 @@ const resizeFile = require('./lib/resize.js')
 const path = require('path');
 const fs = require('fs');
 
-const scrape = async (gamename,romspath) => {
-  const url = await findimage(config.url,gamename)
+const scrape = async (gamename,romspath,siteurl,imgheight) => {
+  const url = await findimage(siteurl,gamename)
   if(url){
-  await saveFile('./roms/' + gamename + '.png',url)
-  await resizeFile(romspath + '/' + gamename + '.png',parseInt(config.imgheight)).then(
+  await saveFile(romspath + '/' + gamename + '.png',url)
+  await resizeFile(romspath + '/' + gamename + '.png',parseInt(imgheight)).then(
     console.log('✅ Saved image for ' + gamename)
   )
   }
@@ -20,10 +20,17 @@ const scrape = async (gamename,romspath) => {
 }
 
 const start = async () => {
-  const files = fs.readdirSync('./roms/')
-  files.forEach(async file => {
-   await scrape(path.parse(file).name,path.resolve('./roms/'));
-  })
+  config.forEach(entry => {
+    const files = fs.readdirSync(entry.folder)
+    files.forEach(async file => {
+      if(path.parse(file).ext != ".png")
+        await scrape(path.parse(file).name,
+        path.resolve(entry.folder),
+        entry.url,
+        entry.imgheight)
+      })
+  }
+  )
 }
 
 start()
